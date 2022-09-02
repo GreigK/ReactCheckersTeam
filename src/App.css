@@ -85,6 +85,13 @@ td{
 
   border-style: solid;
 
-  background: linear-gradient(red, black);
-  border-color: aqua;
+  border-color: black;
+}
+
+.black-sq {
+  background-image: linear-gradient(#333333, #666666, #333333);
+}
+
+.white-sq {
+  background-image: linear-gradient(#aaaaaa, #eeeeee, #aaaaaa);
 }

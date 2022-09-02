@@ -29,99 +29,93 @@ function App() {
         <section id="chessboard-container">
 
         <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-          </tr>
+                <td className='black-sq'>1</td>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+                <td className='black-sq'>1</td>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+        </tr>
 
+        <tr>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+                <td className='black-sq'>1</td>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+                <td className='black-sq'>1</td>
+        </tr>
 
+        <tr>
+                <td className='black-sq'>1</td>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+                <td className='black-sq'>1</td>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+        </tr>
 
-          <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-              </tr>
+        <tr>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+                <td className='black-sq'>1</td>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+                <td className='black-sq'>1</td>
+        </tr>
 
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-              </tr>
+        <tr>
+                <td className='black-sq'>1</td>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+                <td className='black-sq'>1</td>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+        </tr>
 
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-              </tr>
+        <tr>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+                <td className='black-sq'>1</td>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+                <td className='black-sq'>1</td>
+        </tr>
 
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-              </tr>
+        <tr>
+                <td className='black-sq'>1</td>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+                <td className='black-sq'>1</td>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+        </tr>
 
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-              </tr>
+        <tr>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+                <td className='black-sq'>1</td>
+                <td className='white-sq'>2</td>
+                <td className='black-sq'>3</td>
+                <td className='white-sq'>4</td>
+                <td className='black-sq'>1</td>
+        </tr>
 
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-              </tr>
-
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-              </tr>
-              
-
-
-
-        
         </section>
         
         {/* <aside className="player-box pb2">2</aside> */}
