@@ -4,7 +4,7 @@
   overflow: hidden;
 
   text-align: center;
-  color: yellowgreen;
+  color: white;
 
   opacity: 0.7;
 }
@@ -95,3 +95,4 @@ td{
 .white-sq {
   background-image: linear-gradient(#aaaaaa, #eeeeee, #aaaaaa);
 }
+

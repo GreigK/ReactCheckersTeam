@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import BoardSquare from '../components/BoardSquare';
 import styled from 'styled-components';
+import './GameBoard.css'
 
 const BoardStyle = styled.div`
 display: grid;
@@ -8,15 +9,18 @@ grid-template-columns: repeat(8, 100px);
 grid-template-rows: repeat(8, 100px);
 width: 800px;
 height: 800px;
-background-color: #F7E47E;
+background-color: ${props => props.boardColour};
 `
 
 const GameBoard = () => {
 
     const [board, setBoard] = useState([])
+    const [redPiece, setRedPiece] = useState(false)
+    const [blackPiece, setBlackPiece] = useState(false)
     
 
-    // const hasRedPiece =  (x % 2 == 0 && y == 1  ? null : true)
+    // const hasRedPiece = () => setRedPiece(false)
+    // const hasBlackPiece = () => setBlackPiece(true)
 
     useEffect(() => {
         let squares = [];
@@ -28,10 +32,10 @@ const GameBoard = () => {
         setBoard(squares)
     }, [])
 
-    
+    const boardColour = redPiece ? 'red' : blackPiece ? 'blue' : '#F7E47E'
 
     return(
-        <BoardStyle>
+        <BoardStyle boardColour={boardColour}>
         {board}
         </BoardStyle>
     )
