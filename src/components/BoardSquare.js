@@ -22,23 +22,22 @@ padding-top: 80px;
 // padding-top: 80px;
 // `
 
-const BoardSquare = ({x, y, hasRedPiece, hasBlackPiece, hasMine, beenDestroyed}) => {
+const BoardSquare = ({x, y, hasRedPiece, hasBlackPiece, isEmpty}) => {
 
     const [xPos, setXPos] = useState('')
     const [yPos, setYPos] = useState('')
     const [redPiece, setRedPiece] = useState(false)
     const [blackPiece, setBlackPiece] = useState(false)
-    const [mine, setMine] = useState(false)
-    const [destroyed, setDestroyed] =useState(false)
+    const [emptyPiece, setEmptyPiece] = useState(true)
 
     
     useEffect(() => {
         setXPos(x)
         setYPos(y)
         setBlackPiece(hasBlackPiece)
-        setMine(hasMine)
-        setDestroyed(beenDestroyed)
         setRedPiece(hasRedPiece)
+        setEmptyPiece(isEmpty)
+        
     }, [])
     // (x % 2 == 0 && y == 1  ? setRedPiece(hasRedPiece) : null)
     

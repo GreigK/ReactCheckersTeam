@@ -11,17 +11,18 @@ height: 800px;
 background-color: #F7E47E;
 `
 
-const GameBoard = ({x, y, setRedPiece}) => {
+const GameBoard = () => {
 
     const [board, setBoard] = useState([])
+    
 
-    const hasRedPiece =  (x % 2 == 0 && y == 1  ? null : true)
+    // const hasRedPiece =  (x % 2 == 0 && y == 1  ? null : true)
 
     useEffect(() => {
         let squares = [];
         for(let i = 1; i < 9; i++){
             for(let i2 = 1; i2 < 9; i2++){
-                squares.push(<BoardSquare x={i2} y={i} key={Math.random()}  hasRedPiece={hasRedPiece} hasBlackPiece={false} hasMine={false} beenDestroyed={false}/>)
+                squares.push(<BoardSquare x={i2} y={i} key={Math.random()}  hasRedPiece={false} hasBlackPiece={false} isEmpty={true}/>)
             }
         }
         setBoard(squares)
