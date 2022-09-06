@@ -17,8 +17,8 @@ background-color: ${props => props.boardColour};
 
 const GameBoard = () => {
 
-    const [boardInfo, setBoardInfo, refBoardInfo] = useState([]);
-    const [boardElements, setBoardElements, refBoardElements] = useState([])
+    const [boardInfo, setBoardInfo, refBoardInfo] = useState([]); // renders te board with the board elements, most up to date, will change on ever move and render to display that
+    const [boardElements, setBoardElements, refBoardElements] = useState([])  // the information that is held in each square eg, x,y, colour etc
     // const [redPiece, setRedPiece] = useState(true);
     // const [blackPiece, setBlackPiece] = useState(false);
     const [pieceState, setPieceState] = useState([
@@ -42,13 +42,26 @@ const GameBoard = () => {
 
     const targetSquare = (searchId) => {
         console.log(searchId);
+        console.log(refBoardInfo.current[searchId].hasRedPiece)
+        let found = refBoardInfo.current[searchId]
+        if(refStartSquare.current === null){
+            setStartSquare(found)
+        }else{
+            setEndSquare(found)
+        }
+        // let newInfoArray = [...refBoardInfo.current]
+        // newInfoArray[searchId].hasRedPiece = false;
+        // newInfoArray[searchId].hasBlackPiece = true;
+        // setBoardInfo(newInfoArray)
+
+
 
     };
 
     useEffect(() => {
         let squares = [];
         let elements = []
-        let id = 1;
+        let id = 0;
         for (let i = 0; i < 8; i++) {
             for (let i2 = 0; i2 < 8; i2++) {
                 squares.push({
@@ -75,7 +88,7 @@ const GameBoard = () => {
     useEffect(() => {
         console.log("Use effect called");
         let squares = [];
-        let id = 1;
+        let id = 0;
         for (let i = 0; i < refBoardInfo.current.length; i++) {
                 squares.push(<BoardSquare x={refBoardInfo.current[i].x} y={refBoardInfo.current[i].y} id ={refBoardInfo.current[i].id} key={Math.random()} hasRedPiece={refBoardInfo.current[i].hasRedPiece} hasBlackPiece={refBoardInfo.current[i].hasBlackPiece} isEmpty={refBoardInfo.current[i].isEmpty} targetSquare={refBoardInfo.current[i].targetSquare} />)
                 id++;
