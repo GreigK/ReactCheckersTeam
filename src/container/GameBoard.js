@@ -12,11 +12,24 @@ height: 800px;
 background-color: ${props => props.boardColour};
 `
 
+
+
 const GameBoard = () => {
 
     const [board, setBoard] = useState([])
-    const [redPiece, setRedPiece] = useState(false)
+    const [redPiece, setRedPiece] = useState(true)
     const [blackPiece, setBlackPiece] = useState(false)
+    const [pieceState, setPieceState] = useState([
+        ['b', '', 'b' ,'','', 'r', '' ,'r'],
+        ['', 'b', '' ,'','', 'r', '' ,'r'],
+        ['b', '', 'b' ,'','', 'r', '' ,'r'],
+        ['', 'b', '' ,'','', 'r', '' ,'r'],
+        ['b', '', 'b' ,'','', 'r', '' ,'r'],
+        ['', 'b', '' ,'','', 'r', '' ,'r'],
+        ['b', '', 'b' ,'','', 'r', '' ,'r'],
+        ['', 'b', '' ,'','', 'r', '' ,'r'],
+    ])
+    
     
 
     // const hasRedPiece = () => setRedPiece(false)
@@ -24,15 +37,20 @@ const GameBoard = () => {
 
     useEffect(() => {
         let squares = [];
-        for(let i = 1; i < 9; i++){
-            for(let i2 = 1; i2 < 9; i2++){
-                squares.push(<BoardSquare x={i2} y={i} key={Math.random()}  hasRedPiece={false} hasBlackPiece={false} isEmpty={true}/>)
+        for(let i = 0; i < 8; i++){
+            for(let i2 = 0; i2 < 8; i2++){
+                squares.push(<BoardSquare x={i2} y={i} key={Math.random()}  hasRedPiece={pieceState[i2][i] === "r"} hasBlackPiece={pieceState[i2][i] === "b"} isEmpty={true} targetSquare={targetSquare}/>)
             }
         }
         setBoard(squares)
     }, [])
 
-    const boardColour = redPiece ? 'red' : blackPiece ? 'blue' : '#F7E47E'
+    const targetSquare = (x, y) => {
+        console.log(`x = ${x}, y = ${y}, piece = ${pieceState[x][y]}`);
+    }
+
+    // const boardColour = redPiece ? 'red' : blackPiece ? 'blue' : '#F7E47E';
+    const boardColour = '#F7E47E'
 
     return(
         <BoardStyle boardColour={boardColour}>

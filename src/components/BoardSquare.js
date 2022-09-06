@@ -1,14 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components';
 
-// const Square = styled.div`
-// display: grid;
-// grid-template-columns: repeat(8, 100px);
-// grid-template-rows: repeat(8, 100px);
-// width: 800px;
-// height: 800px;
-// background-color: green;
-// `
+const Square = styled.div`
+background-color: ${props => props.squareColour};
+`
 
 // const Dark = styled.div`
 // background-color: #9D8A24;
@@ -22,7 +17,7 @@ import styled from 'styled-components';
 // padding-top: 80px;
 // `
 
-const BoardSquare = ({x, y, hasRedPiece, hasBlackPiece, isEmpty}) => {
+const BoardSquare = ({x, y, hasRedPiece, hasBlackPiece, isEmpty, targetSquare}) => {
 
     const [xPos, setXPos] = useState('')
     const [yPos, setYPos] = useState('')
@@ -43,14 +38,15 @@ const BoardSquare = ({x, y, hasRedPiece, hasBlackPiece, isEmpty}) => {
     
     // const setRedRow = () => { x % 2 == 0 && y == 1  ? setRedPiece(true) : null}
 
+    const squareColour =  hasRedPiece ? 'red' : hasBlackPiece ? 'blue' : '#F7E47E';
 
     return(
         // <div>
         // {/* <Square>X={x}, Y={y}, hasRed={hasRedPiece.toString()}, hasBlack={hasBlackPiece.toString()}, hasAMine={hasMine.toString()}, hasBeenDestroyed={beenDestroyed.toString()}</Square> */}
         // </div>
-        <div>
+        <Square squareColour={squareColour} onClick={() => targetSquare(x,y)}>
             x={x}, y={y}
-        </div>
+        </Square>
         // {x % 2 == !0 && y == 6? <Black>o</Black> : null}
         // {x % 2 == 0 && y == 7  ? <Black>o</Black> : null}
         // {x % 2 == !0 && y == 8 ? <Black>o</Black> : null}
