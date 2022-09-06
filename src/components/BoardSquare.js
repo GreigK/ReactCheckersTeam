@@ -17,23 +17,23 @@ background-color: ${props => props.squareColour};
 // padding-top: 80px;
 // `
 
-const BoardSquare = ({x, y, hasRedPiece, hasBlackPiece, isEmpty, targetSquare}) => {
+const BoardSquare = ({x, y, id, hasRedPiece, hasBlackPiece, isEmpty, targetSquare}) => {
 
-    const [xPos, setXPos] = useState('')
-    const [yPos, setYPos] = useState('')
-    const [redPiece, setRedPiece] = useState(false)
-    const [blackPiece, setBlackPiece] = useState(false)
-    const [emptyPiece, setEmptyPiece] = useState(true)
+    // const [xPos, setXPos] = useState('')
+    // const [yPos, setYPos] = useState('')
+    // const [redPiece, setRedPiece] = useState(false)
+    // const [blackPiece, setBlackPiece] = useState(false)
+    // const [emptyPiece, setEmptyPiece] = useState(true)
 
     
-    useEffect(() => {
-        setXPos(x)
-        setYPos(y)
-        setBlackPiece(hasBlackPiece)
-        setRedPiece(hasRedPiece)
-        setEmptyPiece(isEmpty)
+    // useEffect(() => {
+    //     setXPos(x)
+    //     setYPos(y)
+    //     setBlackPiece(hasBlackPiece)
+    //     setRedPiece(hasRedPiece)
+    //     setEmptyPiece(isEmpty)
         
-    }, [])
+    // }, [])
     // (x % 2 == 0 && y == 1  ? setRedPiece(hasRedPiece) : null)
     
     // const setRedRow = () => { x % 2 == 0 && y == 1  ? setRedPiece(true) : null}
@@ -44,8 +44,8 @@ const BoardSquare = ({x, y, hasRedPiece, hasBlackPiece, isEmpty, targetSquare}) 
         // <div>
         // {/* <Square>X={x}, Y={y}, hasRed={hasRedPiece.toString()}, hasBlack={hasBlackPiece.toString()}, hasAMine={hasMine.toString()}, hasBeenDestroyed={beenDestroyed.toString()}</Square> */}
         // </div>
-        <Square squareColour={squareColour} onClick={() => targetSquare(x,y)}>
-            x={x}, y={y}
+        <Square squareColour={squareColour} onClick={() => targetSquare(id)}>
+            x={x}, y={y}, id={id}
         </Square>
         // {x % 2 == !0 && y == 6? <Black>o</Black> : null}
         // {x % 2 == 0 && y == 7  ? <Black>o</Black> : null}
