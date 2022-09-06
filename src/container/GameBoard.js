@@ -45,14 +45,14 @@ const GameBoard = () => {
             //Get peice from origin
             const originPiece = pieceState[refSquare.x][refSquare.y];
             // Create copy of piece state to update it
-            const pieceStateCopy = [...pieceState];
+            const destination = [...pieceState];
             // set new state of dest square to be what was in the origin square
-            pieceStateCopy[x][y] = originPiece;
+            destination[x][y] = originPiece;
             // set origin to me emplty
-            pieceStateCopy[refSquare.x][refSquare.y] = '';
-            // console.log(pieceStateCopy);
+            destination[refSquare.x][refSquare.y] = '';
+            // console.log(destination);
             // update the state of the board with new piecestate
-            setPieceState(pieceStateCopy);
+            setPieceState(destination);
             // clear the origin to be next players move
             setStartSquare({});
         } else {
@@ -60,7 +60,7 @@ const GameBoard = () => {
         }
     };
 
-
+// things hapening once and then not doing it again is usually due to state fucking us up
 
 
     useEffect(() => {
@@ -84,5 +84,7 @@ const GameBoard = () => {
     )
 
 }
+
+// onDoubleClick
 
 export default GameBoard;
