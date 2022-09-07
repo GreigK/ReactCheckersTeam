@@ -44,49 +44,10 @@ const GameBoard = () => {
         ['b', '', 'b', '', '', '', 'r', ''],
         ['', 'b', '', '', '', 'r', '', 'r'],
     ]);
-    const [startSquare, setStartSquare, refStartSquare] = useState(null);
 
-    const targetSquare = (searchId) => {
-
-        let found = refBoardInfo.current
-   
-        if(refStartSquare.current === null){
-            const originPiece = found[searchId]
-            if (originPiece.isEmpty === false){
-            setStartSquare(originPiece)
         }
 
-        }else{
-            const copyFound = [...found]
-            const destinationPiece = copyFound[searchId]
-            const originPiece = copyFound[refStartSquare.current.id]
-
-            if (refStartSquare.current.hasBlackPiece === true){
-                destinationPiece.hasBlackPiece = true
-                destinationPiece.isEmpty = false
-                originPiece.isEmpty = true
-                originPiece.hasBlackPiece = false
-                originPiece.hasRedPiece = false
-                setStartSquare(null)
-            }
-
-            else if (refStartSquare.current.hasRedPiece === true){
-                destinationPiece.hasRedPiece = true
-                destinationPiece.isEmpty = false
-                originPiece.isEmpty = true
-                originPiece.hasRedPiece = false
-                originPiece.hasBlackPiece = false
-                setStartSquare(null)
-            }
-
-            else if (refStartSquare.current.isEmpty === true){
-                setStartSquare(null)
-            }
-
-            setBoardInfo(copyFound)
-        }
-
-
+// things hapening once and then not doing it again is usually due to state fucking us up
 
     };
 
@@ -155,5 +116,7 @@ const GameBoard = () => {
 
 
 }
+
+// onDoubleClick
 
 export default GameBoard;
