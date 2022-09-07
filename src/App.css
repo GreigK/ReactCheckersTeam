@@ -1,6 +1,10 @@
 .App{
   color:aliceblue;
   text-align: center;
+  background-image: url(../src/container/images/check.jpg);
+  background-size: 802px;
+  background-repeat: no-repeat;
+  opacity: 0.8;
 }
 
 /* .App {

@@ -1,3 +1,4 @@
+import check from './images/check.jpg'
 import React, { useEffect } from 'react';
 import BoardSquare from '../components/BoardSquare';
 import styled from 'styled-components';
@@ -7,8 +8,8 @@ const BoardStyle = styled.div`
 display: grid;
 grid-template-columns: repeat(8, 100px);
 grid-template-rows: repeat(8, 100px);
-width: 800px;
-height: 800px;
+width: 1000px;
+height: 1000px;
 background-color: ${props => props.boardColour};
 `;
 
@@ -117,12 +118,10 @@ const GameBoard = () => {
 
 
     // const boardColour = redPiece ? 'red' : blackPiece ? 'blue' : '#F7E47E';
-    const boardColour = '#F7E47E';
-
 
 
         return (
-            <BoardStyle boardColour={boardColour}>
+            <BoardStyle>
                 {boardElements}
             </BoardStyle>
         )

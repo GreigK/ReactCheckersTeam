@@ -1,9 +1,11 @@
 .red{
-    background-color: palevioletred;
+    background-color: #8F3152;
+    margin: 7px;
     border-radius: 1000000px;
 }
 
 .blue{
-    background-color: darkblue;
+    background-color: #31906E;
+    margin: 7px;
     border-radius: 1000000px;
 }

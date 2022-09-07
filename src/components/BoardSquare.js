@@ -4,7 +4,12 @@ import styled from 'styled-components';
 
 const Square = styled.div`
 background-color: ${props => props.squareColour};
-`
+// `
+// height: 120px;
+// width: 120px;
+// border: 3px solid black;
+// display: flex;
+
 
 // const Dark = styled.div`
 // background-color: #9D8A24;
@@ -46,7 +51,7 @@ const BoardSquare = ({x, y, id, hasRedPiece, hasBlackPiece, isEmpty, targetSquar
     return(
 
         <Square className = {squareClass} onClick={() => targetSquare(id)}>
-            x={x}, y={y}, id={id}
+            <></>
         </Square>
         // {x % 2 == !0 && y == 6? <Black>o</Black> : null}
         // {x % 2 == 0 && y == 7  ? <Black>o</Black> : null}
