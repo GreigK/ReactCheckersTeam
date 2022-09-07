@@ -48,7 +48,6 @@ const GameBoard = () => {
             const destinationPiece = copyFound[searchId]
             const originPiece = copyFound[refStartSquare.current.id]
 
-            console.log(refStartSquare.current)
             if (refStartSquare.current.hasRedPiece === true){
                 destinationPiece.hasRedPiece = true
                 destinationPiece.isEmpty = false
@@ -57,7 +56,18 @@ const GameBoard = () => {
                 originPiece.hasBlackPiece = false
                 setStartSquare(null)
             }
-            console.log(destinationPiece)
+            else if (refStartSquare.current.hasBlackPiece === true){
+                destinationPiece.hasBlackPiece = true
+                destinationPiece.isEmpty = false
+                originPiece.isEmpty = true
+                originPiece.hasBlackPiece = false
+                originPiece.hasRedPiece = false
+                setStartSquare(null)
+            }
+            else if (refStartSquare.current.isEmpty === true){
+                setStartSquare(null)
+            }
+
             setBoardInfo(copyFound)
         }
 
