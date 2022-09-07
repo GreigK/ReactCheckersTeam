@@ -106,7 +106,7 @@ const GameBoard = () => {
                     <h2>rules:</h2>
                     <ListStyle>
                         <li>just google it!</li>
-                        <li>and to remove a piece double click on it, but careful you can't get it back!</li>
+                        <li>to remove a piece double click on it, but careful you can't get it back!</li>
                         <li>that's it!</li>
                     </ListStyle>
                     </TextStyle>
