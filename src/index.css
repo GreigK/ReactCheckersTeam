@@ -5,9 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #955251;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.fruit {
+  display: flex;
+  padding: 30px;
+  ;
+}
+
+
+.game {
+  width: 560px;   
+  height: 560px;
+  display: flex;
+  flex-wrap: wrap;
+}
+ /* using the 560 because its nicely divided by 8 which is then used for the image being 70 */
+.game img {
+  width: 70px;
+  height: 70px;
 }
