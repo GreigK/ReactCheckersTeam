@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import BoardSquare from '../components/BoardSquare';
 import styled from 'styled-components';
 import useState from 'react-usestateref'
+import './GameBoard.css';
 
 const BoardStyle = styled.div`
 display: flex;
@@ -134,6 +135,7 @@ const GameBoard = () => {
 
 
         return (
+        <main>
         <BoardStyle>
             <span>
                 {boardElements}
@@ -148,6 +150,7 @@ const GameBoard = () => {
                     </ListStyle>
                     </TextStyle>
          </BoardStyle>
+         </main>
         )
 
 
