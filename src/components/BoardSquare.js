@@ -1,3 +1,4 @@
+import './BoardSquare.css'
 import React, {useEffect, useState} from 'react'
 import styled from 'styled-components';
 
@@ -38,13 +39,13 @@ const BoardSquare = ({x, y, id, hasRedPiece, hasBlackPiece, isEmpty, targetSquar
     
     // const setRedRow = () => { x % 2 == 0 && y == 1  ? setRedPiece(true) : null}
 
-    const squareColour =  hasRedPiece ? 'red' : hasBlackPiece ? 'blue' : '#F7E47E';
+
+    // const squareColour =  hasRedPiece ? 'red' : hasBlackPiece ? 'blue' : '#F7E47E';
+    const squareClass = hasRedPiece ? 'red' : hasBlackPiece ? 'blue' : 'empty';
 
     return(
-        // <div>
-        // {/* <Square>X={x}, Y={y}, hasRed={hasRedPiece.toString()}, hasBlack={hasBlackPiece.toString()}, hasAMine={hasMine.toString()}, hasBeenDestroyed={beenDestroyed.toString()}</Square> */}
-        // </div>
-        <Square squareColour={squareColour} onClick={() => targetSquare(id)}>
+
+        <Square className = {squareClass} onClick={() => targetSquare(id)}>
             x={x}, y={y}, id={id}
         </Square>
         // {x % 2 == !0 && y == 6? <Black>o</Black> : null}
