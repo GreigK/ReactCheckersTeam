@@ -53,6 +53,11 @@ const NavBar = () => {
                     <Link to="/checkers">Checkers</Link>
                 </ElementOfNav>
             </Wrapper>
+            <Wrapper>
+                <ElementOfNav>
+                    <Link to="/candycrush">CandyCrush</Link>
+                </ElementOfNav>
+            </Wrapper>
         </Navigation>
     )
 }
