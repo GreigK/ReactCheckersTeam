@@ -5,14 +5,27 @@ import styled from 'styled-components';
 import useState from 'react-usestateref'
 
 const BoardStyle = styled.div`
-display: grid;
-grid-template-columns: repeat(8, 100px);
-grid-template-rows: repeat(8, 100px);
-width: 1000px;
-height: 1000px;
-background-color: ${props => props.boardColour};
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: stretch;
+& span {
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(8, 100px);
+    width: 1000px;
+    height: 1000px;
+    background-color: ${props => props.boardColour};
+}
 `;
 
+const ListStyle = styled.ul`
+list-style-type: upper-roman;
+text-align: left;
+font-size: 1.5em;
+`
+const TextStyle = styled.div`
+`
 
 
 const GameBoard = () => {
@@ -38,9 +51,9 @@ const GameBoard = () => {
    
         if(refStartSquare.current === null){
             const originPiece = found[searchId]
-            const copyOrigin = [...found]
+            if (originPiece.isEmpty === false){
             setStartSquare(originPiece)
-
+        }
 
         }else{
             const copyFound = [...found]
@@ -89,7 +102,7 @@ const GameBoard = () => {
                      "key":Math.random() ,
                      "hasRedPiece":pieceState[i2][i] === "r",
                      "hasBlackPiece":pieceState[i2][i] === "b",
-                     "isEmpty":true,
+                     "isEmpty":pieceState[i2][i] !== "r" && pieceState[i2][i] !== "b",
                      "targetSquare":targetSquare
                     })
 
@@ -121,9 +134,20 @@ const GameBoard = () => {
 
 
         return (
-            <BoardStyle>
+        <BoardStyle>
+            <span>
                 {boardElements}
-            </BoardStyle>
+            </span>
+            <TextStyle>
+                    <h1>CRAZY CHECKERS</h1>
+                    <h2>rules:</h2>
+                    <ListStyle>
+                        <li>just google it!</li>
+                        <li>and to remove a piece double click on it, but careful you can't get it back!</li>
+                        <li>that's it!</li>
+                    </ListStyle>
+                    </TextStyle>
+         </BoardStyle>
         )
 
 
