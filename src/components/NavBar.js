@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
 const Navigation = styled.ul`
+font-size: 30px;
 list-style-type: none;
 margin: auto;
 width: 100%:
 overflow: hidden;
 display: flex;
-justify-content: flex-end;
+justify-content: space-evenly;
 background-color: gray;
 width: device-width;`
 
