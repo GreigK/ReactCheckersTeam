@@ -9,7 +9,7 @@ width: 100%:
 overflow: hidden;
 display: flex;
 justify-content: flex-end;
-background-color: #92A8D1;
+background-color: gray;
 width: device-width;`
 
 const ElementOfNav = styled.li`

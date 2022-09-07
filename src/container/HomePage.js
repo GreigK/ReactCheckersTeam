@@ -1,4 +1,5 @@
-
+import './HomePage.css'
 export const HomePage = () =>{ 
-    return("Welcome! There are games here")
+    return(
+        <div className="home">"Welcome! There are games here"</div>)
 }

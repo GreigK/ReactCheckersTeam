@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 const Bird = styled.div`
 position: absolute;
-background-color: red;
+background-color: #8F3152;
 height: ${(props) => props.size}px;
 width: ${(props) => props.size}px;
 top: ${(props) => props.top}px;
@@ -22,7 +22,7 @@ justify-content: center;
 const GameBox = styled.div`
 height: ${(props) => props.height}px;
 width: ${(props) => props.width}px;
-background-color: black;
+background-color: #AE6C6B;
 overflow: hidden;`
 
 const Obstacle = styled.div`
@@ -31,7 +31,7 @@ top: ${(props) => props.top}px;
 height: ${(props) => props.height}px;
 width: ${(props) => props.width}px;
 left: ${(props) => props.left}px;
-background-color: green;`
+background-color: #318F6E;`
 
 const bird_size = 20;
 const game_width = 500;
@@ -101,8 +101,8 @@ function FlappyBirds() {
     const newPositionOfBird = positionOfBird - heightOfJump;
     if (!gameHasStarted) {
       setGameHasStarted(true);
-    } else if (newPositionOfBird < 0) {
-      setPositionOfBird(0)
+    } else if (newPositionOfBird < 60) {
+      setPositionOfBird(60)
     } else {
       setPositionOfBird(newPositionOfBird);
     }
@@ -128,7 +128,6 @@ function FlappyBirds() {
       </GameBox>
       <span>{score}</span>
     </PageStyle>
-    <img src='/chcik.jpg'></img>
     </div>
   );
 }
