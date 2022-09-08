@@ -23,9 +23,11 @@ align-items: stretch;
 const ListStyle = styled.ul`
 list-style-type: upper-roman;
 text-align: left;
+padding: 60px;
 font-size: 1.5em;
 `
 const TextStyle = styled.div`
+font-size: 1.5em;
 `
 
 
@@ -85,9 +87,6 @@ const GameBoard = () => {
 
             setBoardInfo(copyFound)
         }
-
-
-
     };
 
     useEffect(() => {
@@ -146,9 +145,9 @@ const GameBoard = () => {
                     <ListStyle>
                         <li>just google it!</li>
                         <li>to remove a piece double click on it, but careful you can't get it back!</li>
-                        <li>that's it!</li>
+                        <li>that's it :)</li>
                     </ListStyle>
-                    </TextStyle>
+            </TextStyle>
          </BoardStyle>
          </main>
         )

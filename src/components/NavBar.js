@@ -10,7 +10,7 @@ width: 100%:
 overflow: hidden;
 display: flex;
 justify-content: space-evenly;
-background-color: gray;
+background-image: linear-gradient(to bottom right, #52595D, #BCC6CC);
 width: device-width;`
 
 const ElementOfNav = styled.li`
