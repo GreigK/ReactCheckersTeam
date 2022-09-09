@@ -1,5 +1,5 @@
 # features is the most up to date branch
-
+please go to branches > features to see the current code
 
 # Getting Started with Create React App
 
